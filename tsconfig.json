@@ -1,0 +1,21 @@
+{
+  "files": [
+    "src/index.js",
+    "src/toInputValue.js",
+    "src/toISOString.js",
+  ],
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "declaration": true,
+    "strict": true,
+    "outDir": "tsc",
+    "declarationMap": true,
+    "module": "ESNext",
+    "target": "ES2017"
+  }
+}
