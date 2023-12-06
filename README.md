@@ -7,19 +7,19 @@ pnpm add @feelinglovelynow/datetime-local
 ```
 
 
+## 🤓 Unit Tests
+![Statements](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg?style=flat)
+
+
 ## 🙏 Description
 * First function accepts a `Date` object and returns a string that may be used as a `value` in an `input` that has a type of `datetime-local` - `YYYY-MM-DDTHH:mm`
 * Second function accepts a `datetime-local` input's `value` and returns a date time string format based on ISO 8601 - `YYYY-MM-DDTHH:mm:ss.sssZ`
 
 
 ## 💚 toInputValue()
-```ts
-/**
- * Accepts a `Date` object and returns a string that may be used as a `value` in an `input` that has a type of `datetime-local` - `YYYY-MM-DDTHH:mm`
- * @param { Date } date 
- * @returns { string }
- */
-```
+* Accepts a `Date` object and returns a string that may be used as a `value` in an `input` that has a type of `datetime-local` - `YYYY-MM-DDTHH:mm`
+* `toInputValue(date: Date): string`
+* Example:
 ```ts
 import { toInputValue } from '@feelinglovelynow/datetime-local'
 
@@ -29,16 +29,16 @@ const value = toInputValue(date)
 ```html
 <input bind:value={ value } type="datetime-local">
 ```
+* 🔥 Errors we may throw
+```ts
+if (!(date instanceof Date) || date.toString() === 'Invalid Date') throw { id: 'fln__datetime-local__invalid-date', message: 'Please pass toInputValue() a valid Date object', _errorData: { date } }
+```
 
 
 ## 💛 toISOString()
-```ts
-/**
- * Accepts a `datetime-local` input's `value` and returns a date time string format based on ISO 8601 - `YYYY-MM-DDTHH:mm:ss.sssZ`
- * @param { string } date 
- * @returns { string }
- */
-```
+* Accepts a `datetime-local` input's `value` and returns a date time string format based on ISO 8601 - `YYYY-MM-DDTHH:mm:ss.sssZ`
+* `toISOString(date: string): string`
+* Example:
 ```ts
 import { toInputValue, toISOString } from '@feelinglovelynow/datetime-local'
 
@@ -46,16 +46,11 @@ const date = new Date()
 date.setDate(date.getDate() - 7) // now - 7 days
 const iso = toISOString(toInputValue(date)) // ready for db insert
 ```
-
-
-## 🔥 Errors we may throw
-* `toInputValue()`
+* 🔥 Errors we may throw
 ```ts
-if (!(date instanceof Date)) throw { id: 'fln__datetime-local__invalid-date', message: 'Please pass toInputValue() a date object', _errorData: { date } }
-```
-* `toISOString()`
-```ts
-if (typeof date !== 'string') throw { id: 'fln__datetime-local__invalid-date', message: 'Please pass toISOString() a string', _errorData: { date } }
+if (!date || typeof date !== 'string') throw { id: 'fln__datetime-local__empty-date', message: 'Please pass toISOString() a not empty string', _errorData: { date } }
+
+if (date.toString() === 'Invalid Date') throw { id: 'fln__datetime-local__invalid-date', message: 'Please pass toISOString() a valid date string', _errorData: { date } }
 ```
 
 

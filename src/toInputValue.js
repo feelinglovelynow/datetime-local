@@ -4,7 +4,7 @@
  * @returns { string }
  */
 export function toInputValue (date) {
-  if (!(date instanceof Date)) throw { id: 'fln__datetime-local__invalid-date', message: 'Please pass toInputValue() a date object', _errorData: { date } }
+  if (!(date instanceof Date) || date.toString() === 'Invalid Date') throw { id: 'fln__datetime-local__invalid-date', message: 'Please pass toInputValue() a valid Date object', _errorData: { date } }
   else {
     const year = date.getFullYear()
     const month = (date.getMonth() + 1).toString().padStart(2, '0')
