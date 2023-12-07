@@ -1,6 +1,6 @@
 {
   "name": "@feelinglovelynow/datetime-local",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "First function accepts a Date object and returns a string that may be used as a value in an input that has a type of datetime-local - YYYY-MM-DDTHH:mm. Second function accepts a datetime-local input's value and returns a date time string format based on ISO 8601 - YYYY-MM-DDTHH:mm:ss.sssZ",
   "author": "https://github.com/feelinglovelynow?tab=repositories",
   "license": "MIT",
