@@ -1,4 +1,4 @@
-import { toInputValue } from './toInputValue.js'
+import { toInputValue } from '../toInputValue.js'
 import { describe, test, expect } from '@jest/globals'
 
 

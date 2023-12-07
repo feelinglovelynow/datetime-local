@@ -1,5 +1,5 @@
-import { toISOString } from './toISOString.js'
-import { toInputValue } from './toInputValue.js'
+import { toISOString } from '../toISOString.js'
+import { toInputValue } from '../toInputValue.js'
 import { describe, test, expect } from '@jest/globals'
 
 

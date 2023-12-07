@@ -1,10 +1,10 @@
 {
   "files": [
+    "src/__tests__/toInputValue.test.js",
+    "src/__tests__/toISOString.test.js",
     "src/index.js",
     "src/toInputValue.js",
-    "src/toInputValue.test.js",
     "src/toISOString.js",
-    "src/toISOString.test.js",
   ],
   "compilerOptions": {
     "noEmit": true,

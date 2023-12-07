@@ -12,12 +12,12 @@ pnpm add @feelinglovelynow/datetime-local
 
 
 ## 🙏 Description
-* First function accepts a `Date` object and returns a string that may be used as a `value` in an `input` that has a type of `datetime-local` - `YYYY-MM-DDTHH:mm`
+* First function accepts a `Date` object and returns a string that may be used as a `value` in an [input that has a type of datetime-local](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local) - `YYYY-MM-DDTHH:mm`
 * Second function accepts a `datetime-local` input's `value` and returns a date time string format based on ISO 8601 - `YYYY-MM-DDTHH:mm:ss.sssZ`
 
 
 ## 💚 toInputValue()
-* Accepts a `Date` object and returns a string that may be used as a `value` in an `input` that has a type of `datetime-local` - `YYYY-MM-DDTHH:mm`
+* Accepts a `Date` object and returns a string that may be used as a `value` in an [input that has a type of datetime-local](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local) - `YYYY-MM-DDTHH:mm`
 * `toInputValue(date: Date): string`
 * Example:
 ```ts
@@ -36,7 +36,7 @@ if (!(date instanceof Date) || date.toString() === 'Invalid Date') throw { id: '
 
 
 ## 💛 toISOString()
-* Accepts a `datetime-local` input's `value` and returns a date time string format based on ISO 8601 - `YYYY-MM-DDTHH:mm:ss.sssZ`
+* Accepts a [datetime-local input's value](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local) and returns a date time string format based on ISO 8601 - `YYYY-MM-DDTHH:mm:ss.sssZ`
 * `toISOString(date: string): string`
 * Example:
 ```ts
